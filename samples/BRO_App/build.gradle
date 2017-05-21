@@ -1,0 +1,40 @@
+apply plugin: 'com.android.model.application'
+
+model {
+    android {
+        compileSdkVersion 23
+        buildToolsVersion '25.0.3'
+
+        defaultConfig {
+            applicationId "de.tinf13aibi.cardboardbro"
+            minSdkVersion.apiLevel 19
+            targetSdkVersion.apiLevel 23
+            versionCode 1
+            versionName "1.0"
+        }
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles.add(file('../../proguard-gvr.txt'))
+                //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+    }
+}
+
+dependencies {
+    repositories {
+        maven {
+            url '../BRO_App/libs/myosdk'
+        }
+    }
+    //compile fileTree(dir: 'libs', include: ['*.jar'])
+
+//    compile project(':BRO_App:libs:core')
+//    compile project(':BRO_App:libs:common')
+    compile 'com.google.vr:sdk-base:1.40.0'
+    compile 'com.google.vr:sdk-common:1.40.0'
+
+    compile 'com.thalmic:myosdk:0.10.0@aar'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+}

@@ -7,6 +7,7 @@ include ':samples:sdk-simplepanowidget'
 include ':samples:sdk-simplevideowidget'
 include ':samples:sdk-treasurehunt'
 include ':samples:sdk-videoplayer'
+include ':samples:BRO_App'
 
 // NDK samples are disabled by default because they need the Android NDK to be
 // installed in addition to the SDK. To build them, first extract the NDK .so
